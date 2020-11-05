@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const SERVER_URL = 'http://localhost:3000/flights.json';
+const SERVER_URL = 'http://9ee6f34926a2.ngrok.io/flights.json';
 
 
 class Flights extends Component {
@@ -114,7 +114,7 @@ const FlightsList = (props) => {
     return (
       <div>
         <h1>Flight List</h1>
-          { props.flights.map( (f) =>( <div key={ f.id }> <p>{ f.flightNumber }  { f.date }  { f.origin }  { f.destination }  { f.plane } </p></div> )) }
+          { props.flights.map( (f) =>( <div key={ f.id }> <p>{ f.flightNumber }  { f.date }  { f.origin }  { f.destination }  { f.plane.split(',').length } </p></div> )) }
       </div>
     );
 }

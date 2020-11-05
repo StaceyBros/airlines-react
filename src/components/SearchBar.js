@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const SERVER_URL = 'http://localhost:3000/flights.json';
+const SERVER_URL = ' http://9ee6f34926a2.ngrok.io./flights.json';
 
 class SearchBar extends Component  {
   constructor(props){
     super(props);
     this.state = {
       cities: [{
-        "origin":"Sydney",
-        "destination":"london",
+
       }]
     };
     this.saveSearch = this.saveSearch.bind(this);
@@ -40,25 +39,6 @@ render(){
 );
 }
 }
-    // this.handleChangse1 = this.handleChange1.bind();
-    // this.handleChange2 = this.handleChange2.bind();
-    // this.handleSubmit = this.handleSubmit.bind()
-
-  // handleChange1(e) {
-  //   this.setState({origin: e.target.value});
-  // }
-  //
-  // handleChange2(e) {
-  //   this.setState( { destination: e.target.value } );
-  // }
-//
-//   handleSubmit(event) {
-//     event.preventDefault();
-//     this.props.onSubmit( this.state.content );
-//     axios.get(SERVER_URL).then(function (results){
-//     }.bind(this));
-//   }
-
 
 class FlightsSearch extends Component {
   constructor(){

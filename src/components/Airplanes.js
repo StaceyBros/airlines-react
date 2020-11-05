@@ -3,7 +3,8 @@ import AirplaneScheme from './AirplaneScheme';
 import axios from 'axios';
 import React, {Component} from 'react';
 
-const SERVER_URL = 'http://localhost:3000/airplanes.json';
+
+const SERVER_URL = ' http://9ee6f34926a2.ngrok.io/airplanes.json';
 
 class Airplanes extends Component {
   constructor(){
@@ -16,7 +17,7 @@ class Airplanes extends Component {
       axios.get(SERVER_URL).then( (result) => {
         console.log(result)
         this.setState( { scheme: result.data } );
-        // setTimeout( getSchemes, 6000);
+        setTimeout( getSchemes, 6000);
       })
     }
     getSchemes();
